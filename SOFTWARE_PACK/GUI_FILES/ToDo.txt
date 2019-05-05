@@ -1,0 +1,100 @@
+IMPORTANTI
+V - @GUI_EDA capire cosa serve mostrare
+V - @GUI_EDA funzioni per il calcolo degli indici (manca solo l'ultimo)
+V - @GUI_EDA correzione finti massimi/minimi (reject su finestra o rimozione automatica tramite calcoli sulla distanza picco-picco. Ex: Xb-Xa<k ====> 'zona di ripples' =====> rimuovi picchi)
+- @GUI_MULTI tutto
+V - @GUI_EEG capire come gestire i reject di eeglab
+V - @GUI unificare le finestrature, usando la variabile globale T_Windows
+    V - GUI_EEG non fa il reset in caso di risposta negativa alla domanda
+V - @GUI_EEG mostrare le finestre come aree (uniformità stilistica e selezionandone una mostrare media e std
+V - @GUI_ECG_Windows mostrare i valori di media nelle bande di frequenza nelle tabelle
+V - @GUI_ECG integrare edit taco
+	V - Problema: come dico alla GUI ECG di aggiornarsi alla chiusura di EditTaco?
+    V - salvare su file di segnali
+    V - in richiesta finestrature gli eventi vengono plottati male (non più necessario)
+V - @GUI rendere possibile salvataggio di indici in file matlab
+    V - evitare errori in caso di rinuncia al salvataggio
+- @GUI usare variabili globali diverse per ogni GUI in modo da evitare interferenze
+V - @GUI creare un'interfaccia per costruire le finestrature
+    V - capire come integrarla
+V - @GUI_EEG far scegliere all'utente la baseline di riferimento
+    V - capire come aggiornare la tendina delle finestre
+V - @GUI_ECG_Windows il vettore potenza del tacogramma non ha sempre la stessa lunghezza di tempo_auto, perchè? come risolvere?
+V - @Preelab scrivere gli script di preelaborazione per ottenere il file finale
+- @GUI fare in modo che il panel degli eventi sia scrollabile o adattabile (si può usare solo lo slider e farselo via codice perchè matlab fa schifo)
+V - @GUI_EEG smussare tutti gli indici come EI (solo in visualizzazione)
+- @GUI EDA aggiungere indice integrale (lajante 2012)
+
+V - plot di spettro taco,resp,coerenza quadratica in nuova finestra
+V - poter modificare le bande
+V - gestire ridimensionamento finestre GUI
+V - mostrare linea fine finestra su edit taco
+V - restutuire potenza coerente e non coerente tacogramma (spettro*coerenza e spettro*(1-coerenza)) integrale sulle varie bande
+V - restituire potenza coer e non su tutte le frequenze
+V - mostrare potenza coerente come area sotto la potenza taco e rep
+V - mostrare area nel tempo di potenza coerente e non in gui ecg windows (aggiornare funzione fullscreen)
+- possibilità applicare filtro mediano a tacogramma (parametri utente)
+V - possibilità salvare tracce nel tempo potenze LF, HF, LF/HF, VLF, coerenza quadratica
+V- separazione GUI windows in due finestre (grafici e valori numerici
+V - unificare uvlf e vlf per portare ordine modello a 5 o 7
+V - sistemare grafica edit bande (edit inizio e fine banda)
+V - output rapporti bilancia simpato vagale
+- output in formati standard (txt)(secondario)
+V - eliminare gli output su consolle (per eseguibile)
+O - ottimizzare gli algoritmi per gli spettri (col mex tutto sommato va bene)
+V - dare scelta di funzione pan-tompkins da usare
+- uniformare le funzioni di individuazione picchi R
+V - possibilità caricare file senza eventi
+V - rendere fs facoltativo (anzi toglierlo, è ridondante)
+V - documentazione sui file in ingresso
+- tradurre testi in inglese
+V - aggiungere potenze LF e HF normalizzate e tacogramma (segnale temporale)
+V - bottone fullscreen tacogramma
+V - edit singola finestra
+V - finestratura rendere più usabile la scelta da pointer
+V - bande non contigue (importante)
+V - togliere grafico ECG in prima schermata
+V - offrire scelta di coefficiente oblio e ordine modello (in GUI ECG)
+V - mostrare in view spectra (tramite bottone) i grafici di signal processing (a finestra non selezionata)
+V - in ECG windows lavorare solo su finestra scelta prima (spostare il salva in GUI ECG)
+V - in ECG windows mostrare
+        V - spettri medi (lungo il tempo della finestra) di taco, resp e coerenza
+        V - ulteriore edit bande
+        V - reinserire dati su potenze (quelli delle tabelle) solo valori medi sulla finestra (no T1 T2)
+        V - inserire in tabelle info su potenze coerenti e non
+O - togliere tutto quello che riguarda i guadagni (anche dal salvataggio?)
+V - pan tompkins original usare vettore tempi per calcolo taco e usare come metodo di default
+V - integra modifiche Pier
+NU = x/(tot-vlf) potenze
+V - potenza coerene no NU
+- calcolo media nella finestra per valori delle potenze (sia bande che coerenti) usare media troncata (trimmean)
+
+
+SECONDARI
+V - @GUI_ECG non recupera la propria finestratura della stessa sessione
+V - @GUI_ECG consentire numero variabile di finestre
+V - @GUI lavorare su file in path assoluto, in modo da consentire all'utente di cambiare cartella matlab
+- fare ordine per quanto riguarda le cartelle (è brutto avere tutti i file nella folder principale)
+V - @GUI_fullscreen rendere possibile scegliere il passo della finestra da mostrare
+- @GUI_fullscreen rendere possibile mostrare una legenda
+V - @GUI_fullscreen modificare il passo dello scroll in base al numero di parti mostrate (e nasconderlo in caso nParts == 1)
+- @GUI rendere possibile salvataggio di indici in file excel
+V - @GUI sistemare i nomi delle finestre (il titolo mostrato, non il nome dei file)
+- @GUI fare le funzioni di fixPosition
+V - @GUI_EEG mettere label sempre visibili per i set di elettrodi
+V - @GUI_ECG mostrare potenza coerente
+V - @GUI_ECG potenza coerente da calcolare su media di finestra
+V - @GUI_iniziale non funziona il pulsante close
+V - @GUI_iniziale ecg fa check su variabile canali eeg
+- @GUI_EEG evidenziare finestra su elettrodo
+
+
+ELETTRODI USATI IN INDICI
+F3
+aF3
+F4
+aF4
+Fz
+Fpz
+F7
+F8
